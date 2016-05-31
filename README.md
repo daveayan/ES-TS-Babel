@@ -1,2 +1,2 @@
 # learn-js-ts
-learning typescript, es6 and revising javascript
+learning typescript, es6+ and (re)learning javascript
