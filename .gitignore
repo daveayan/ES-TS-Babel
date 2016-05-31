@@ -1,0 +1,10 @@
+*.swp
+*.swo
+*.iml
+node_modules/
+bower_components/
+.idea/
+target/
+.sonar
+*.log
+*.map
