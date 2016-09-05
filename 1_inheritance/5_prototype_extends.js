@@ -1,5 +1,21 @@
+//var __extends = function (d, b) {
+var _protoExtends = function (subClass, parentClass) {
+
+    var objectCreated = Object.create(subClass.prototype);
+
+    for (var property in parentClass) {
+        if (! subClass.hasOwnProperty(property)) {
+            subClass[property] = parentClass[property];
+        }
+    }
+    function __() {
+        this.constructor = subClass;
+    }
+    subClass.prototype = parentClass === null ? Object.create(parentClass) : (__.prototype = parentClass.prototype, new __());
+};
+
 var Shape = function(name) {
-    function area() {
+    Shape.prototype.area = area {
         console.log("In ShapeImpl::area - " + this.name);
         var calculatedArea = 0;
         console.log("-- ShapeImpl::area " + this.name + " = " + calculatedArea);
@@ -37,11 +53,14 @@ var Square = function(name, width) {
 
     console.log("In Square::createObject");
 
-    var newObject = new Square();
+    var newObject = new Shape();
 
     newObject.name = name;
     newObject.width = width;
-    newObject._superArea = Shape.area;
+
+    newObject._superArea = newObject.area;
+    newObject.area = area;
+    newObject.perimeter = perimeter;
 
     console.log("-- In Square::createdObject" + newObject.name);
     return newObject;
@@ -69,12 +88,14 @@ var Circle = function(name, radius) {
     }
     console.log("In Circle::createObject");
 
-    var newObject = new Circle();
+    var newObject = new Shape();
 
     newObject.name = name;
     newObject.radius = radius;
 
     newObject._superArea = newObject.area;
+    newObject.area = area;
+    newObject.circumference = circumference;
 
     console.log("-- In Circle::createdObject" + newObject.name);
     return newObject;

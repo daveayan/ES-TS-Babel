@@ -1,4 +1,4 @@
-var Shape = Object.create(Object.prototype);
+var Shape = Object.create(Object);
 Shape.create = function(name) {
     console.log("Shape::create " + name);
 

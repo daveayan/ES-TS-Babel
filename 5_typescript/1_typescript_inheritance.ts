@@ -19,11 +19,6 @@ class Square extends Shape {
         super(name);
         this.width = width;
     }
-    area(a: string) : string {
-
-        return a;
-
-    }
     area() {
         console.log("In Square::area - " + this.name);
 

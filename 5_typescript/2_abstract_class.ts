@@ -1,4 +1,4 @@
-class Shape {
+abstract class Shape {
     name: string;
 
     constructor(name: string) {
@@ -18,11 +18,6 @@ class Square extends Shape {
     constructor(name: string, width: number) {
         super(name);
         this.width = width;
-    }
-    area(a: string) : string {
-
-        return a;
-
     }
     area() {
         console.log("In Square::area - " + this.name);
@@ -67,11 +62,11 @@ class Circle extends Shape {
     }
 }
 
-let shape1 = new Shape("Generic Shape 1");
-let shape2 = new Shape("Generic Shape 2");
-
-shape1.area();
-shape2.area();
+//let shape1 = new Shape("Generic Shape 1");
+//let shape2 = new Shape("Generic Shape 2");
+//
+//shape1.area();
+//shape2.area();
 
 console.log("-------");
 

@@ -21,9 +21,6 @@ var Square = (function (_super) {
         _super.call(this, name);
         this.width = width;
     }
-    Square.prototype.area = function (a) {
-        return a;
-    };
     Square.prototype.area = function () {
         console.log("In Square::area - " + this.name);
         var calculatedArea = (this.width * this.width) + _super.prototype.area.call(this);
@@ -76,4 +73,4 @@ circle1.area();
 circle2.area();
 circle1.circumference();
 circle2.circumference();
-//# sourceMappingURL=5_typescript_inheritance.js.map
+//# sourceMappingURL=1_typescript_inheritance.js.map
